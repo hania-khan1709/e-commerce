@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - CartHub</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --brand-sage: #556b2f;
+      --brand-brown: #4a3b32;
+      --brand-beige: #f5f2eb;
+    }
+    body { background-color: var(--brand-beige) !important; color: var(--brand-brown); }
+    .bg-sage { background-color: var(--brand-sage) !important; }
+    .btn-sage { background-color: var(--brand-sage); color: white; }
+    .btn-sage:hover { background-color: #3b4d1f; color: white; }
+  </style>
+</head>
+<body class="min-vh-100 d-flex flex-column justify-content-between">
+
+  <!-- Header -->
+  <nav class="navbar navbar-dark bg-sage">
+    <div class="container">
+      <a class="navbar-brand fw-bold fs-4" href="index.html">CartHub</a>
+      <a href="index.html" class="btn btn-outline-light btn-sm">Back to Home</a>
+    </div>
+  </nav>
+
+  <!-- Form -->
+  <div class="container my-5">
+    <div class="row justify-content-center">
+      <div class="col-md-5">
+        <div class="card border-0 shadow-sm p-4" style="background-color: #ffffff;">
+          <h3 class="fw-bold text-center mb-1">Welcome Back</h3>
+          <p class="text-muted text-center small mb-4">Login to manage your account</p>
+          
+          <form action="index.html">
+            <div class="mb-3">
+              <label class="form-label">Email Address</label>
+              <input type="email" class="form-control" placeholder="e.g. anna@example.com" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Password</label>
+              <input type="password" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-sage w-100 py-2 mt-2">Login</button>
+          </form>
+
+          <hr class="my-4">
+          <p class="text-center small text-muted mb-0">Don't have an account? <a href="signup.html" class="text-decoration-none fw-bold text-sage">Sign up</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-white text-center py-3 border-top">
+    <small class="text-muted">&copy; CartHub</small>
+  </footer>
+
+</body>
+</html>

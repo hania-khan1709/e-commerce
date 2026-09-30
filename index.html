@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CartHub - Online Store</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+  <style>
+    :root {
+      --brand-sage: #556b2f;
+      --brand-sage-dark: #3b4d1f;
+      --brand-brown: #4a3b32;
+      --brand-beige: #f5f2eb;
+      --brand-warm-card: #eef0e5;
+    }
+    body { background-color: var(--brand-beige) !important; color: var(--brand-brown); }
+    .bg-sage { background-color: var(--brand-sage) !important; }
+    .bg-beige { background-color: var(--brand-beige) !important; }
+    .text-sage { color: var(--brand-sage) !important; }
+    .text-brown { color: var(--brand-brown) !important; }
+    
+    .btn-sage { background-color: var(--brand-sage); color: white; border: none; }
+    .btn-sage:hover { background-color: var(--brand-sage-dark); color: white; }
+    
+    .btn-brown { background-color: var(--brand-brown); color: var(--brand-beige); border: none; }
+    .btn-brown:hover { background-color: #2e241f; color: var(--brand-beige); }
+
+    .hero-banner {
+      background: linear-gradient(135deg, rgba(85,107,47,0.9), rgba(74,59,50,0.88)), 
+                  url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1200&q=80') center/cover;
+      color: #f8f6f0;
+      padding: 90px 0;
+    }
+    .product-img { height: 220px; object-fit: cover; }
+    .card-custom { background-color: #ffffff; border: 1px solid #e2ded4; }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-sage sticky-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold fs-3 text-light" href="index.html">CartHub</a>
+      <div class="d-flex align-items-center gap-3">
+        <a class="text-light text-decoration-none d-none d-md-inline" href="index.html#products">Products</a>
+        <a class="text-light text-decoration-none d-none d-md-inline" href="index.html#reviews">Reviews</a>
+        <a class="btn btn-outline-light position-relative" href="checkout.html">
+          <i class="bi bi-cart3"></i> Cart
+          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">3</span>
+        </a>
+        <a class="btn btn-outline-light" href="login.html">Login</a>
+        <a class="btn btn-brown" href="signup.html">Signup</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-banner text-center">
+    <div class="container">
+      <h1 class="display-3 fw-bold mb-3">Elevate Your Everyday Style</h1>
+      <p class="lead mb-4 col-md-8 mx-auto">Explore handpicked premium essentials curated for functionality, beauty, and long-lasting quality.</p>
+      <a href="#products" class="btn btn-brown btn-lg px-4 me-2">Shop Collection</a>
+      <a href="add-product.html" class="btn btn-outline-light btn-lg px-4">+ Sell Product</a>
+    </div>
+  </section>
+
+  <!-- Product Listing -->
+  <section id="products" class="container my-5">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <div>
+        <h2 class="fw-bold text-sage m-0">Featured Products</h2>
+        <p class="text-muted m-0">Curated items chosen by our top creators</p>
+      </div>
+      <a href="add-product.html" class="btn btn-outline-success btn-sm">+ Add Product</a>
+    </div>
+
+    <div class="row g-4">
+      <!-- Product 1 -->
+      <div class="col-lg-3 col-md-6">
+        <div class="card card-custom shadow-sm h-100">
+          <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=600&q=80" class="card-img-top product-img" alt="Headphones">
+          <div class="card-body d-flex flex-column">
+            <span class="badge bg-secondary w-auto mb-2 align-self-start">Tech</span>
+            <h5 class="card-title fw-bold text-brown">Studio Wireless Headphones</h5>
+            <p class="card-text text-muted small">Listed by Hania</p>
+            <div class="mt-auto d-flex justify-content-between align-items-center">
+              <span class="fs-5 fw-bold text-sage">$149.00</span>
+              <a href="checkout.html" class="btn btn-sage btn-sm"><i class="bi bi-cart-plus"></i> Add to Cart</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="col-lg-3 col-md-6">
+        <div class="card card-custom shadow-sm h-100">
+          <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=80" class="card-img-top product-img" alt="Smart Watch">
+          <div class="card-body d-flex flex-column">
+            <span class="badge bg-secondary w-auto mb-2 align-self-start">Wearables</span>
+            <h5 class="card-title fw-bold text-brown">Minimalist Smart Watch</h5>
+            <p class="card-text text-muted small">Listed by Anna</p>
+            <div class="mt-auto d-flex justify-content-between align-items-center">
+              <span class="fs-5 fw-bold text-sage">$199.00</span>
+              <a href="checkout.html" class="btn btn-sage btn-sm"><i class="bi bi-cart-plus"></i> Add to Cart</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="col-lg-3 col-md-6">
+        <div class="card card-custom shadow-sm h-100">
+          <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80" class="card-img-top product-img" alt="Sneakers">
+          <div class="card-body d-flex flex-column">
+            <span class="badge bg-secondary w-auto mb-2 align-self-start">Footwear</span>
+            <h5 class="card-title fw-bold text-brown">Crimson Speed Sneakers</h5>
+            <p class="card-text text-muted small">Listed by Adina</p>
+            <div class="mt-auto d-flex justify-content-between align-items-center">
+              <span class="fs-5 fw-bold text-sage">$89.00</span>
+              <a href="checkout.html" class="btn btn-sage btn-sm"><i class="bi bi-cart-plus"></i> Add to Cart</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="col-lg-3 col-md-6">
+        <div class="card card-custom shadow-sm h-100">
+          <img src="https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&w=600&q=80" class="card-img-top product-img" alt="Laptop Bag">
+          <div class="card-body d-flex flex-column">
+            <span class="badge bg-secondary w-auto mb-2 align-self-start">Accessories</span>
+            <h5 class="card-title fw-bold text-brown">Leather Messenger Bag</h5>
+            <p class="card-text text-muted small">Listed by Raffay</p>
+            <div class="mt-auto d-flex justify-content-between align-items-center">
+              <span class="fs-5 fw-bold text-sage">$120.00</span>
+              <a href="checkout.html" class="btn btn-sage btn-sm"><i class="bi bi-cart-plus"></i> Add to Cart</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews Section -->
+  <section id="reviews" class="py-5 border-top border-bottom" style="background-color: #eae6db;">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold text-sage">What Our Customers Say</h2>
+        <p class="text-muted">Trusted reviews from verified community members</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card border-0 p-4 h-100 shadow-sm" style="background-color: #f5f2eb;">
+            <div class="text-warning mb-2"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+            <p class="card-text text-secondary">"The quality of the headphones exceeds expectations. Prompt shipping and neat packaging."</p>
+            <h6 class="fw-bold text-brown mb-0 mt-auto">- Hamza</h6>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card border-0 p-4 h-100 shadow-sm" style="background-color: #f5f2eb;">
+            <div class="text-warning mb-2"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+            <p class="card-text text-secondary">"Super easy checkout experience. Adina's listed sneakers arrived in two days!"</p>
+            <h6 class="fw-bold text-brown mb-0 mt-auto">- Hania</h6>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card border-0 p-4 h-100 shadow-sm" style="background-color: #f5f2eb;">
+            <div class="text-warning mb-2"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></div>
+            <p class="card-text text-secondary">"Clean layout and great selection of quality accessories. Loved buying here."</p>
+            <h6 class="fw-bold text-brown mb-0 mt-auto">- Raffay</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-sage text-light text-center py-4">
+    <div class="container">
+      <p class="mb-0 small">&copy; CartHub. Built with Bootstrap & HTML.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
